@@ -1,0 +1,269 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>Free Mobile Store Website </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <ul class="left-info">
+                        <li><a href="#"><i class="fa fa-envelope"></i>contact@company.com</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>123-456-7890</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="right-icons">
+                        <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <h2>Mobile Store<em> Website</em></h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'checkout' %}">Checkout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+            <!-- Item -->
+            <div class="item item-1">
+                <div class="img-fill">
+                    <div class="text-content">
+                        <h6>he loves pain!</h6>
+                        <h4>how times i charge this <br> count because</h4>
+                        <p>Great people abandon the pain of the main itterative process. Choice of body molestion, hate
+                            and cheering for the bad things, that's where everyone else is. </p>
+                        <a href="{% url 'products' %}" class="filled-button">Products</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // Item -->
+            <!-- Item -->
+            <div class="item item-2">
+                <div class="img-fill">
+                    <div class="text-content">
+                        <h6>mobile store website!</h6>
+                        <h4>the great pain of these which are forsaken <br> hate the method</h4>
+                        <p>The pain itself is love, the main adiplising lit. But the fault is the desire to gain
+                            resillence by undertaking the hardships that willin order to catch him.</p>
+                        <a href="" class="filled-button">Brands</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // Item -->
+            <!-- Item -->
+            <div class="item item-3">
+                <div class="img-fill">
+                    <div class="text-content">
+                        <h6>mobile store website!</h6>
+                        <h4>The pain itself <br>be fun fillet.</h4>
+                        <p>I should live my earth. There's no running movie, that's my Olympic. But neither is the
+                            course of the vehicle. Phasellus lacinia and sapien vitae dapibus. To start with the protein
+                            tomorrow.</p>
+                        <a href="{% url 'contact' %}" class="filled-button">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <!-- // Item -->
+        </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <style>
+        .search-all {
+            text-align: center;
+            padding-top: 5%;
+        }
+    </style>
+    <div class="search-all">
+        <form action="search" method="get">
+            <input type="text" name="search-text" placeholder="Seached text">
+            <input type="number" name="from-price" placeholder="Price from">
+            <input type="number" name="to-price" placeholder="price to">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Featured <em>Products</em></h2>
+                        <span>Mobile models</span>
+                    </div>
+                </div>
+                {% for item in products %}
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="{{item.image.url}}" alt="image" />
+                        <div class="down-content">
+                            <h4>{{item.title}}</h4>
+                            <div style="margin-bottom:10px;">
+                                <span> <sup>$</sup>{{item.price}}</span>
+                            </div>
+    
+                            <p>{{item.description}}</p>
+                            <a href="/product-details/{{item.id}}" class="filled-button">Details</a>
+                            <a href="/product-view/{{item.id}}" class="filled-button">View</a>
+                        </div>
+                    </div>
+    
+                    <br>
+                </div>
+                {% endfor %}
+    
+            </div><a href="/product-details/" class="filled-button">Add</a>
+        </div>
+    </div>
+
+    
+    <div class="callback-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Request a <em>call back</em></h2>
+                        <span>Mobile </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name"
+                                            placeholder="Full Name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="email"
+                                            pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" class="form-control" id="subject"
+                                            placeholder="Subject" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message"
+                                            placeholder="Your Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="border-button">Send
+                                            Message</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Additional Scripts -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script src="{% static 'assets/js/owl.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<div style="font-size: 24px;">
+    Types: <br>
+    {% for item in brands %}
+    {{ item.id }} | {{ item.title }}
+    <a href="../update/{{ item.id }}">Update</a>
+    <a href="../delete/{{ item.id }}">Delete</a> <br>
+    {% endfor %}
+    <br>
+    <a href="../create">create</a>
+</div>

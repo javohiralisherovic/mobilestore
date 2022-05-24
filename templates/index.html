@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>.search-all {
+  text-align: center;
+  padding-top: 5%;
+  }
+</style>
+<div class="search-all">
+  <form action="search" method="get">
+    <input type="text" name="search-text" placeholder="Seached text" >
+    <input type="number" name="from-price" placeholder="Price from">
+    <input type="number" name="to-price" placeholder="price to">
+    <input type="submit" value="Search">
+  </form>
+</div>
+
+<div class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Featured <em>Products</em></h2>
+          <span>Mobile models</span>
+        </div>
+      </div>
+      {% for item in products %}
+      <div class="col-md-4">
+        <div class="service-item">
+          <img src="{{item.image.url}}" alt="image" />
+          <div class="down-content">
+            <h4>{{item.title}}</h4>
+            <div style="margin-bottom:10px;">
+              <span> <sup>$</sup>{{item.price}}</span>
+            </div>
+
+            <p>{{item.description}}</p>
+            <a href="/product-details/{{item.id}}" class="filled-button">Details</a>
+          </div>
+        </div>
+
+        <br>
+      </div>
+      {% endfor %}
+
+    </div><a href="{% url 'product-details' %}" class="filled-button">Add</a>
+  </div>
+</div>
+
+
+
+{% endblock %}

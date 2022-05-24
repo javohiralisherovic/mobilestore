@@ -1,0 +1,6 @@
+<form method="post" class="form">{% csrf_token %}
+    <div class="form-message">
+        Are you sure you want to delete "<span>{{ object.title }}</span>"?
+    </div>
+    <button type="submit" class="form-btn">Confirm</button>
+</form>
